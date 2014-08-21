@@ -9,10 +9,10 @@ class SiteMailer < ActionMailer::Base
   end
 
   def confirm_user(flight_id, current_user_id)
-     @flight = Flight.find(flight_id)
-     @user = User.find(current_user_id)
-     mail(to: @user.email, subject: "Flight confirmation")
-   end
+    @flight = Flight.find(flight_id)
+    @user = User.find(current_user_id)
+    mail(to: @user.email, subject: "Flight confirmation")
+  end
 
   def daily_email(flight_id, contact_id)
     @flight = Flight.find(flight_id)
